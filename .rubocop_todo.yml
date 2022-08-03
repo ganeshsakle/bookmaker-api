@@ -68,3 +68,13 @@ Style/SpecialGlobalVars:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 198
+
+
+curl --location --request POST 'http://localhost:3000/api/v1/users' \
+--header 'Content-Type: application/json' \
+--data-raw '{ 
+  "user" : {
+    "email": "user@duetcode.io",
+    "password": "samplepassword"
+  }
+}'
