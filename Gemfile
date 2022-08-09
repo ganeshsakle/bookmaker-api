@@ -5,6 +5,11 @@ ruby '3.0.2'
 
 gem 'devise', '~> 4.8', '>= 4.8.1'
 
+# gem 'simple_token_authentication'
+# Gemfile
+
+gem 'devise-jwt'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
 
@@ -33,7 +38,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem "rack-cors"
+gem "rack-cors"
 
 group :development, :test do
   gem 'rubocop', '~> 1.32', require: false
