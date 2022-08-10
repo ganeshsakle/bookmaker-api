@@ -3,11 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
         #  :recoverable, :rememberable, :validatable,
-        :jwt_authenticable
-        jwt_revocation_strategy: Address
+        :jwt_authenticatable,
+         jwt_revocation_strategy: JwtDenylist
 
-  def as_json(options)
-    super({ only: %i[id email created_at] }.merge(options))
-  end
+  # def as_json(options)
+  #   super({ only: %i[id email created_at] }.merge(options))
+  # end
   
 end
